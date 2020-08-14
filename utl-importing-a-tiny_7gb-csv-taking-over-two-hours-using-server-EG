@@ -10,13 +10,13 @@ https://communities.sas.com/t5/SAS-Enterprise-Guide/Importing-a-large-CSV-file-a
                                                                                                                                                                 
 SOAPBOX ON                                                                                                                                                      
 I have seen server EG with as little as 500mb of ram. However, I don't think this was your problem.                                                             
-If you happen hit the 500mg ram limit EG will start pafing it brains out and a 1 minute job                                                                     
-can take hours. Count distinct is notorius for pager thrashing?                                                                                                 
-SOAPBOX OFF                                                                                                                                                     
+If you happen hit the 500mg ram limit EG will start paging it brains out and a 1 minute job                                                                     
+can take hours. Count distinct is notorius for page thrashing?                                                                                                                                                                                                                                                   
                                                                                                                                                                 
-On my inexpensive Dell 7610 less than $1,000. It took less than a minute and very little memory.                                                                
+On my inexpensive Dell 7610, less than $1,000. It took less than a minute and very little memory.                                                                
 If you had a moderate size CSV say 700gb you could parition the csv in say 28 250mb files and run 28                                                            
-sinultaneous jobs and then create a view to put the 14 SAS datasets back together.                                                                              
+sinultaneous jobs and then create a view to put the 38 SAS datasets back together. 
+I/O is usually single threaded and slow wfich is optimum for multi-processing.
 I have 16 cores and 32 threads.                                                                                                                                 
 SOAPBOX OFF.                                                                                                                                                    
                                                                                                                                                                 
